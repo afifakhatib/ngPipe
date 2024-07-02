@@ -26,22 +26,19 @@ export class FilterPipe implements PipeTransform {
     //  }
     // })
 
-    return filteredArr = cricketersArr.filter(player => {
+     return filteredArr = cricketersArr.filter(player => {
 
-      if(searchType ==='name'){
+      if (searchType === 'name') {
         return player.name.toLowerCase().includes(searchVal.toLowerCase())
-      }
-      else if(searchType ==='country'){
+      } else if (searchType === 'country') {
         return player.country.toLowerCase().includes(searchVal.toLowerCase())
+      } else if (searchType === 'yearDebut') {
+        return player.yearDebut.includes(searchVal)
+      } else if (searchType === 'all') {
+        return player.name.toLowerCase().includes(searchVal.toLowerCase()) || player.country.toLowerCase().includes(searchVal.toLowerCase()) || player.yearDebut.includes(searchVal)
       }
-      else if(searchType ==='yearDebut'){
-        return player.yearDebut.toLowerCase().includes(searchVal.toLowerCase())
-      }
-      else if(searchType === 'all'){
-        return player.name.toLowerCase().includes(searchVal.toLowerCase()) || player.country.toLowerCase().includes(searchVal.toLowerCase()) || player.yearDebut.toLowerCase().includes(searchVal.toLowerCase())
-      }
-      else{
-        return [];
+      else {
+        return []
       }
     })
   }
