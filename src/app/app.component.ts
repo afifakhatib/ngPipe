@@ -21,7 +21,10 @@ export class AppComponent implements OnInit{
     
   }
 
+
+
   onTypeChange(type : Event){
     this.searchType = (type.target as HTMLInputElement).value
+    console.log(this.searchType);
   }
 }

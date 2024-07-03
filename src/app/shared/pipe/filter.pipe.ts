@@ -16,7 +16,10 @@ export class FilterPipe implements PipeTransform {
     if(!cricketersArr){
       return []
     }
-
+    //  console.log(searchType);
+    //  console.log(searchVal);
+     
+     
     //  filteredArr = cricketersArr.filter(player => {
     //   if(searchVal){
     //     return player.country.toLowerCase().includes(searchVal.toLowerCase())
