@@ -12,8 +12,8 @@ export class AppComponent implements OnInit{
 
   cricketersData : Iplayer[] = cricketersArr ;
 
-  searchVal : string = '';
-  searchType : string = '';
+  searchVal !: string ;
+  searchType !: string ;
   constructor(){
 
   }
